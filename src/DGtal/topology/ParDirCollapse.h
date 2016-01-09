@@ -82,6 +82,7 @@ public:
     void init ( CC * pComplex ){ complex = pComplex; }
     bool exec (int iteration_number );
     void collapseSurface();
+    void collapseIsthmus();
 
     /**
      * Checks the validity/consistency of the object.
