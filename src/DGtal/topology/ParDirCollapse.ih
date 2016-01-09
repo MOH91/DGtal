@@ -99,9 +99,10 @@ DGtal::ParDirCollapse<CC, TSpace>::exec(int iteration_number )
 
                                         uint32_t data = (*begin).second.data;
                                         //std::cout << "Face initial: "  << faces[i] << "data initial :" << data << "\n" << std::endl;
-                                        if (faces[i] != CC::FIXED && data != CC::FIXED)
+                                        CellMapConstIterator cmIt =complex->findCell(d+1,faces[i]);
+                                       if ( cmIt->second.data != CC::FIXED && data != CC::FIXED)
                                         {
-                                        //std::cout << "Face removed: "  << faces[i] << "data :" <<data << "\n" << std::endl;
+                                        std::cout << "Face removed: "  << faces[i] << "data :" <<data << "\n" << std::endl;
                                         SUB.push_back( faces[i] );
                                         complex->insertCell( SUB.back(), priority );
                                         SUB.push_back( begin->first );

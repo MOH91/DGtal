@@ -115,8 +115,8 @@ int main( int argc, char** argv )
     complex.construct< DigitalSet >( aSet );
     ParDirCollapse<CC, Space> dirCollape( K );
     dirCollape.init ( &complex );
-    //dirCollape.exec ( 1 );
-    dirCollape.collapseSurface();
+    dirCollape.exec ( 1 );
+    //dirCollape.collapseSurface();
     colorShape(complex, board);
     trace.endBlock();
     trace.endBlock();
